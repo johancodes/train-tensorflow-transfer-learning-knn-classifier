@@ -1,0 +1,102 @@
+<html>
+
+  <head>
+
+    <title>Train a Tensorflow Model with Transfer Learning</title>
+      
+    <!-- Load the latest version of TensorFlow.js, MobileNet and KNN Classifier -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+
+    <style>
+
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #container {
+        width: 660px;
+        margin: 0 auto;
+        /*border: 1px #333 solid;*/
+    }
+
+    #console, p {
+        margin: 0 auto;
+        text-align: center;
+        /*border: 1px solid;*/
+        /*max-width: 660px;*/
+     }
+
+     p {
+         margin: 10px 0px 5px 0px;
+         color: grey;
+         margin: 10px;
+     }
+
+     #prediction {
+         color:rgb(95, 164, 247);
+         text-align: center;
+         margin: 15px 10px;
+     }
+
+    video {
+        width: 660px;
+        background-color: #666;
+        margin-top: 5px;
+    }
+
+    button {
+        padding: 20px;
+        color: white;
+        background-color:rgb(95, 164, 247);
+        width: 327.5px;
+        font-size: x-large;
+        font-weight: bold;
+        border: none;
+        margin: 5px 0px 0px 0px;
+     }
+
+     #stack {
+         text-align: center;
+     }
+    
+    </style>
+
+  </head>
+  
+  <body>
+
+    <div id="container">
+
+        <p>Train a Tensorflow machine learning model by placing something in front of the webcam and pressing the A button multiple times to capture images. Place another object in front of the webcam and press the B button multiple times. And so on. Grab my code from <a href="https://github.com/misterlimcodes?tab=repositories">here</a>. Created by <a href="http://joellim.squarespace.com/">Joel Lim.</a></p>
+    
+        <div id="prediction">WAITING TO PREDICT...</div>
+
+        <!-- Add an video stream that we will use to test -->
+
+        <video autoplay playsinline muted id="webcam" ></video>
+
+        <!-- Add buttons -->
+
+        <div id="stack"><button id="class-a">Tap to train A</button>
+
+        <button id="class-b">Tap to train B</button>
+    
+        </div>
+
+        <div id="stack"><button id="class-c">Tap to train C</button>
+
+        <button id="class-d">Tap to train D</button>
+    
+        </div>
+
+        <!-- Load script.js after the content of the page -->
+
+        <script src="script.js"></script>
+
+    </div>
+
+  </body>
+
+</html>
